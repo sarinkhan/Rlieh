@@ -1,0 +1,5 @@
+in order to use the rlieh arduino device,
+you have to upload the arduino sketch to
+your arduino (with everything hooked up
+properly, of course), and run the python
+scripts on the raspberry pi.

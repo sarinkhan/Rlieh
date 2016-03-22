@@ -7,7 +7,7 @@ bezel4x20Y=80;
 boxWallsThickness=1.5;
 buttonsAreaX=30;
 
-buttonsHoleRadius=16.2/2;
+buttonsHoleRadius=16.5/2;
 beamsThickness=3;
 
 boxPart1Z=25;

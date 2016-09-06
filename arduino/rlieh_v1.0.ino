@@ -23,8 +23,8 @@
 
 //variables for automatic light management
 int lightsMode = AUTO;
-int lightOnHour=11;
-int lightOffHour=23;
+int lightOnHour=10;
+int lightOffHour=22;
 
 
 
@@ -72,6 +72,9 @@ int lightsFadeTime[4]={lightsFadeDefaultTime,lightsFadeDefaultTime,lightsFadeDef
 int lightsLevel[4]={0,0,0,0};                    // current light level for each light.
 int lightsMaxLevel[4]={255,255,255,255};         // the maximum light level (255= fully on, 0= fully off)
 unsigned long lightsLastChange[4]={0,0,0,0};     // when the correponding light's level was last updated.
+
+
+
 
 unsigned long currTime=0;
 
@@ -125,7 +128,7 @@ const int tempProbeIdLength=2;
 const int lightIdLength=2;
 
 //serial port constants
-const long serialSpeed=250000;  //serial speed. 250000 can be used with arduino serial monitor, we can go faster with the raspberry pi (500000, 1000000)
+const long serialSpeed=115200;  //serial speed. 1
 const int serialTimeout=10;     //the timeout for the serial terminal. If too high, it will slow down the PWM changes, since the loop function will wait that much time on each pass. 10 works at 250000 speed.
 
 
@@ -151,6 +154,7 @@ void setup()
   rtc.begin();
   
   pinMode(button1Pin, INPUT_PULLUP);
+  pinMode(button2Pin, INPUT_PULLUP);
 
   int i=0;
   for(i=0;i<NB_TRANSISTORS;i++)
